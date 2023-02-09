@@ -33,7 +33,7 @@ namespace ClearConsole
                     gradeLetter = "C";
                 else if (numericGrade >= 60)
                     gradeLetter = "D";
-                else if (numericGrade < 60)
+                else 
                     gradeLetter = "F";
             }
             else
