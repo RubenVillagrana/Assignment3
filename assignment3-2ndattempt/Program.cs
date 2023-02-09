@@ -14,15 +14,18 @@ namespace ClearConsole
 
         static void Main(string[] args)
         {
-
+            Console.WriteLine("********************************************************************");
+            Console.WriteLine("If-else Section Numeric to Letter Grade");
+            Console.WriteLine("Enter number for grade");
             var gradeLetter = "";
             string numericGradeStr;
             decimal numericGrade;
             Console.Write("Enter the number of the grade: ");
             numericGradeStr = Console.ReadLine();
-            if (decimal.TryParse(numericGradeStr, out numericGrade))
+            decimal.TryParse(numericGradeStr, out numericGrade);
+            if (numericGrade >= 0 && numericGrade <= 100)
             {
-                if (numericGrade > 90)
+                if (numericGrade >= 90)
                     gradeLetter = "A";
                 else if (numericGrade >= 80)
                     gradeLetter = "B";
@@ -38,22 +41,9 @@ namespace ClearConsole
 
 
             Console.WriteLine("Grade:" + gradeLetter);
-            Console.WriteLine("Press Enter; to Exit...");
-            Console.Read();
-        }
-    }
-
-}
-
-namespace ClearConsole
-
-{
-    class program
-        {
-
-        public static void Main(string[] args)
-        {
-
+            Console.WriteLine("******************************************************************************");
+            Console.WriteLine("Integer to string day using a switch statement");
+            Console.WriteLine("Enter an integer of the week 1-7");
             var numericDay = Convert.ToInt32(Console.ReadLine());
 
             switch (numericDay)
@@ -85,9 +75,11 @@ namespace ClearConsole
                     break;
 
 
+                    Console.WriteLine("Press Enter; to Exit...");
+                    Console.Read();
             }
         }
+
     }
 }
-
   
